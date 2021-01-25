@@ -1,0 +1,27 @@
+{
+  "name": "next-mobx6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "axios": "^0.21.1",
+    "mobx": "^6.0.5",
+    "mobx-react": "^7.0.6",
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@efox/emp-tsconfig": "^1.1.3",
+    "@efox/eslint-config-react-prittier-ts": "^1.2.5",
+    "@types/node": "^14.14.22",
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "@efox/emp-tsconfig",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "types/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
