@@ -43,9 +43,9 @@ const Person = () => {
     </div>
   )
 }
-//
+// ssr 使用 getInitialProps
 // Person.getInitialProps = async () => {
-Person.getStaticProps = async () => {
+export const getStaticProps = async () => {
   await store.getData()
   await personStore.getData()
   return {store: store.data, personStore: personStore.data}
