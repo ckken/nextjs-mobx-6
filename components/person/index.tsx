@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Random} from 'components/common/Random'
 import {observer} from 'mobx-react'
 import store from './store'
-
+import personStore from './personStore'
 const Input = observer((props: any) => {
   const {name}: {name: 'age' | 'firstName' | 'lastName'} = props
   return (
@@ -39,15 +39,19 @@ const Person = () => {
       <Input name={'firstName'} />
       <Input name={'lastName'} />
       <Input name={'age'} />
+      <p>{JSON.stringify(personStore, null, 2)}</p>
     </div>
   )
 }
-/* export async function getInitialProps() {
-  await store.getData()
-} */
+//
 Person.getInitialProps = async () => {
   await store.getData()
-  return {props: {}}
+  await personStore.getData()
+  return {store: store.data, personStore: personStore.data}
+}
+Person.hydrate = (props: any) => {
+  store.hydrate(props.store)
+  personStore.hydrate(props.personStore)
 }
 
 export default Person
