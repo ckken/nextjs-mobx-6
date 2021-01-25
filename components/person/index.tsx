@@ -44,7 +44,8 @@ const Person = () => {
   )
 }
 //
-Person.getInitialProps = async () => {
+// Person.getInitialProps = async () => {
+Person.getStaticProps = async () => {
   await store.getData()
   await personStore.getData()
   return {store: store.data, personStore: personStore.data}
