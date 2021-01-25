@@ -6,6 +6,7 @@ configure({useProxies: 'never'})
 enableStaticRendering(typeof window === 'undefined')
 //
 export default function App({Component, pageProps}: any) {
+  console.log('pageProps', pageProps)
   if (typeof window !== 'undefined' && Component.hydrate) Component.hydrate(pageProps)
   return <Component {...pageProps} />
 }

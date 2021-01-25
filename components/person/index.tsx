@@ -31,7 +31,11 @@ const Counter = observer(() => {
   )
 })
 
-const Person = () => {
+const Person = (props: any) => {
+  // useEffect(() => {
+  //   store.hydrate(props.store)
+  //   personStore.hydrate(props.personStore)
+  // }, [])
   return (
     <div>
       <Counter />
@@ -43,9 +47,13 @@ const Person = () => {
     </div>
   )
 }
-// ssr 使用 getInitialProps
-// Person.getInitialProps = async () => {
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
+  await store.getData()
+  await personStore.getData()
+  console.log('store.data', store.data)
+  return {props: {store: store.data, personStore: personStore.data}}
+} */
+Person.getInitialProps = async () => {
   await store.getData()
   await personStore.getData()
   return {store: store.data, personStore: personStore.data}
