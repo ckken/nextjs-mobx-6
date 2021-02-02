@@ -56,7 +56,7 @@ const Person = (props: any) => {
 Person.getInitialProps = async () => {
   await store.getData()
   await personStore.getData()
-  return {store: store.data, personStore: personStore.data}
+  return {store, personStore}
 }
 Person.hydrate = (props: any) => {
   store.hydrate(props.store)

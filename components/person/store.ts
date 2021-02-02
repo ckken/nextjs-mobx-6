@@ -25,7 +25,7 @@ class Store {
     this.data = data
   }
   hydrate(d: any) {
-    this.data = d
+    this.data = d.data
   }
 }
 
