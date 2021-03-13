@@ -2,6 +2,7 @@
   "extends": "@efox/emp-tsconfig",
   "compilerOptions": {
     "experimentalDecorators": true,
+    "useDefineForClassFields": true,
     "baseUrl": ".",
     "isolatedModules": true,
     "jsx": "preserve"

@@ -1,6 +1,6 @@
 import React from 'react'
 import {observer} from 'mobx-react'
-import timerStore from 'store/timer'
+import timerStore from 'store/timerDecorator'
 const Inc = observer(() => {
   console.log('inc button')
   return (

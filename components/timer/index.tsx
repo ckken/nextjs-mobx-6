@@ -1,5 +1,5 @@
 import {observer} from 'mobx-react'
-import timerStore from 'store/timer'
+import timerStore from 'store/timerDecorator'
 import Nav from 'components/common/nav'
 import TimerDecorator from './decorator'
 function Timer() {
